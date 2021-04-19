@@ -3,5 +3,10 @@
 <h1>Welcome!</h1>
 <p><%=text%></p>
 
+<%posts.forEach(post => {%>
+<h3><%=post.title%></h3>
+<p><%=post.body.substring(0, 100)%> ... <a href="/post/<%=post.title%>">READ MORE</a></p>
+<%})%>
+
 
 <%-include("partials/footer")-%>
